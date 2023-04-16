@@ -1,0 +1,11 @@
+header{
+    background-color: chartreuse;
+    float: right;
+    width: 100%;
+    text-align: right;
+}
+img{
+    width: 30px;
+    height: 30px;
+    float: right;
+}
