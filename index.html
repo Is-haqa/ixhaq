@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css"href="all.css">
+</head>
+<body>
+    <div style="border-style: solid; margin-top: 10px;padding-top: 20px;padding-bottom: 98%;margin-left: 10px;margin-right: 10px;">
+<style>
+body {
+    background-color:rgb(121, 103, 199);
+}
+</style>
+
+<body>
+    
+    
+<style> border, th, td {
+    border: 4px solid rgb(34, 221, 17);
+    border-collapse: collapse;
+    width: 17px;
+}
+
+</style>
+<head>
+	<title>Login Form</title>
+</head>
+<body>
+	<form action="h2.html" method="post">
+		<label for="username">Username:</label>
+		<input type="text" id="username" name="username">
+
+		<label for="password">Password:</label>
+		<input type="password" id="password" name="password">
+
+		<button type="submit">Login</button>
+	</form>
+</body>
+
+
+<head>
+	<title>LOGIN SAVE</title>
+	<script>
+		function saveData() {
+			var username = document.getElementById("username").value;
+			localStorage.setItem("username", username);
+			alert("Data saved successfully!");
+		}
+
+		function getData() {
+			var username = localStorage.getItem("username");
+			alert("Username: " + username);
+		}
+
+		function clearData() {
+			localStorage.removeItem("username");
+			alert("Data cleared successfully!");
+		}
+	</script>
+     <script>
+        const form = document.querySelector('#login-form');
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+    
+      const email = document.querySelector('#email').value;
+      const password = document.querySelector('#password').value;
+    
+      const existingUser = JSON.parse(localStorage.getItem(email));
+      if (existingUser && existingUser.password === password) {
+        // Log the user in
+        console.log('Logged in!');
+      } else {
+        // Offer the user the option to sign up
+        const confirmSignUp = confirm('No account found. Do you want to sign up?');
+        if (confirmSignUp) {
+          // Save the new user to local storage
+          const newUser = { email, password };
+          localStorage.setItem(email, JSON.stringify(newUser));
+          console.log('Signed up and logged in!');
+        }
+      }
+    });
+      
+  </script>
+</head>
+<body
+</body>
+</html>
+
+</div>   
+</body>
+</html>
